@@ -1,0 +1,36 @@
+{
+  "name": "distance-matrix-api",
+  "version": "1.1.1",
+  "description": "A Node.js wrapper for Distance Matrix API offered by DistanceMatrixAPI.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medwynj/distance-matrix-api.git"
+  },
+  "keywords": [
+    "google",
+    "distance",
+    "matrix",
+    "api",
+    "maps",
+    "distance matrix api",
+    "distancematrixapi",
+    "distance-matrix-api",
+    "json",
+    "node"
+  ],
+  "author": "MedwynJ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medwynj/distance-matrix-api/issues"
+  },
+  "homepage": "https://github.com/medwynj/distance-matrix-api",
+  "dependencies": {
+    "debug": "^2.1.0",
+    "qs-google-signature": "^1.1.1",
+    "request": "^2.36.0"
+  }
+}
