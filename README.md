@@ -1,4 +1,4 @@
-# Node.js wrapper for Distance Matrix API offered by www.DistanceMatrixAPI.com
+# Node.js wrapper for the Distance Matrix API offered by https://DistanceMatrixAPI.com
 
 The Distance Matrix API is a service offered by www.DistanceMatrixAPI.com that provides travel distance and time for a matrix of origins and destinations. The information returned is based on the recommended route between start and end points, as calculated by the DistanceMatrixAPI, and consists of rows containing duration and distance values for each pair.
 

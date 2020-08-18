@@ -1,6 +1,6 @@
 'use strict';
 //
-var request = require('request'),
+var axios = require('axios').default,
   debug = require('debug')("google:dm"),
   qs = require('qs-google-signature');
 
@@ -49,12 +49,14 @@ function makeRequest(options, callback) {
   debug("request options", options)
   var requestURL = DMA_DISTANCE_API_URL + qs.stringify(options, DMA_DISTANCE_API_URL);
   debug("requestURL", requestURL)
-  request(requestURL, function(err, response, data) {
-    if (err || response.statusCode != 200) {
-      return callback(new Error('DMA API request error: ' + data));
-    }
-    callback(null, JSON.parse(data));
+
+  axios.get(requestURL).then(function (response) {
+    callback(null, response.data);
   })
+  .catch(function (error) {
+    console.log(error);
+    return callback(new Error('DMA API request error: ' + error));
+  });
 }
 
 DistanceMatrix.prototype.matrix = function(args, cb) {
